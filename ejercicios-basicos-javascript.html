@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+	<title>Ejercicios Básicos de Javascript</title>
+	<meta charset="utf-8" />
+	<meta name="author" content="Manuel Jesús Alba Sánchez" />
+	<style type="text/css">
+	  body {
+	  		/*Fuente elegida para la letra*/
+	  		font-family: verdana;
+	  		/*Tamaño elegido para la fuente*/
+	  		font-size: 12px;
+	  		/*Color de fondo*/
+	    	background-color: #d1d276;}
+  	</style>
+	</head>
+	<body>
+		<h1>Ejercicios Básicos de Javascript</h1>
+		<script type="text/javascript">
+
+		/*** EJERCICIO 1***/
+		//Muestro la descripción del Ejercicio 1
+		document.write("<b>01) Creación de dos variables numéricas a las que se le asignará un valor entero. Comprobación para saber cuál de los dos números introducidos es mayor.</b>");
+		// Imprimo un salto de línea y la palabra solución para mostrar la respuesta al Ejercicio 1.
+		document.write("<br/><br/>Solución:<br/>");
+		//Creo las variables que voy a usar para este ejercicio.
+		var numero1, numero2;
+		numero1 = 50;
+		numero2 = 25;
+		//Compruebo con la estructura de control if que numero es mayor y lo muestro en pantalla.
+		if (numero1 > numero2){
+			document.write("El número " + numero1 + " es mayor que el número " + numero2);
+		}
+		else {
+			document.write("El número " + numero1 + " es menor que el número " + numero2);
+		} 
+		//Imprimo una linea horizontal para separar el ejercicio 1 del siguiente y un salto de línea en html.
+		document.write("<hr/><br/>");
+
+
+		/*** EJERCICIO 2***/
+		//Muestro la descripción del Ejercicio 2.
+		document.write("<b>02) Números múltiplos de 5 desde el número 1 al número 100 incluido.</b>");
+		//Imprimo un salto de línea y la palabra solución para mostrar la respuesta al Ejercicio 2.
+		document.write("<br/><br/>Solución:<br/>");
+		//Creo la variable numero que voy a usar en este ejercicio.
+		var numero;
+		//Con un bucle for realizo la comprobación de números múltiplos y muestro en pantalla los que son multiplos de 5.
+		for (numero =1; numero < 101; numero++){
+			if (numero%5 == 0){
+				document.write(numero + " ");
+			}
+			else {
+				numero++;
+			}
+		}
+		//Imprimo una linea horizontal para separar el ejercicio 2 del siguiente y un salto de línea en html.
+		document.write("<hr/><br/>");
+
+			
+		/*** EJERCICIO 3***/
+		//Muestro la descripción del Ejercicio 3
+		document.write("<b>03) Los 10 primeros números múltiplos de 3 y de 2.</b>");
+		//Imprimo un salto de línea y la palabra solución para mostrar la respuesta al Ejercicio 3.
+		document.write("<br/><br/>Solución:<br/>");
+		//Creo las tres variables que voy a utilizar para este ejercicio. 
+		var numero, limite, contador;
+		numero = 1; 
+		limite = 10;
+		contador = 0;
+		//Utilizo el bucle while para ir comprobando que numeros cumplen con la condición de ser múltiplos de 3 y 2, esos números los muestro en pantalla.
+		while ( limite != contador){
+			if(numero % 3 == 0 && numero % 2 == 0 ){
+				document.write(numero + " ");
+				contador++;
+			}
+			numero++;  
+		}
+		// Imprimo una linea horizontal para separar el ejercicio 3 del siguiente y un salto de línea en html.
+		document.write("<hr/><br>");
+
+
+		/*** EJERCICIO 4***/
+		//Muestro la descripción del Ejercicio 4
+		document.write("<b>04) Preguntar por dos números y realizar una suma con ellos. Los números pueden tener decimales. Pida los números con prompt.</b>");
+		// Imprimo un salto de línea y la palabra solución para mostrar la respuesta al Ejercicio 4.
+		document.write("<br/><br/>Solución:<br/>");
+		//Pido que se introduzca dos numeros por teclado, utilizando la función prompt de javascript.
+		numero1 = prompt("Introduzca el primer número:");
+		numero2 = prompt("Introduzca el segundo número:")
+		//Para evitar problemas con los números introducidos, si el usuario ha introducido una "," será remplazada por un "." para poder operar correctamente.
+		var numero1coma = numero1.replace(",",".");
+		var numero2coma = numero2.replace(",",".");
+		//Realizo la suma de los dos números introducidos, pero antes son convertidos a numeros de coma flotate, para que se puedan sumar y muestro el resultado en pantalla.
+		suma = parseFloat(numero1coma) + parseFloat(numero2coma);
+		document.write(suma); 
+		//Imprimo una linea horizontal para separar el ejercicio 4 del siguiente y un salto de línea en html.
+		document.write("<hr/><br/>");
+
+
+		/*** EJERCICIO 5***/
+		//Muestro la descripción del Ejercicio 5
+		document.write("<b>05) 80/4 =</b>");
+		//Tal y como se indica en la Tarea, este ejercicio se realiza empleando operadores de desplazamiento de bits. Cuando desplazamos 1 bit a la derecha dividimos un entero por 2.
+		// Imprimo un salto de línea y la palabra solución para mostrar la respuesta al Ejercicio 5.
+		document.write("<br/><br/>Solución:<br/>");
+		//Creo la variable division para utilizarla en el ejercicio para imprimir el resultado.
+		var division;
+		//division = 80 << 2^2;
+		division = 80 >> 2;
+		document.write("80 >> 2 = ")
+		document.write(division);
+		//Imprimo una linea horizontal para separar el ejercicio 5 del siguiente y un salto de línea en html.
+		document.write("<hr/><br/>");
+
+
+		/*** EJERCICIO 6***/
+		//Muestro la descripción del Ejercicio 6
+		document.write("<b>06) 120 * 16 =</b>");
+		//Tal y como se indica en la Tarea, este ejercicio se realiza empleando operadores de desplazamiento de bits. Cuando desplazamos 1 bit a la izquierda multiplicamos un entero por 2.
+		// Imprimo un salto de línea y la palabra solución para mostrar la respuesta al Ejercicio 6.
+		document.write("<br/><br/>Solución:<br/>");
+		//Creo la variable multiplicar para utilizarla en el ejercicio para imprimir el resultado.
+		var multiplicacion = 2 << 3;
+		document.write("120 << 4 = ")
+		document.write(multiplicacion);
+
+
+		</script>
+	</body>
+</html>
